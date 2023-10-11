@@ -1,0 +1,17 @@
+	#container {
+		width: 512px; margin: auto;
+		/* border: 1px solid blue;  */
+	}
+	#container h2 { text-align: center; }
+	#container p { text-align: center; }
+	#container table {
+		width: 100%;
+		border-collapse: collapse; 
+	}
+	#container th { background-color: #9cf; }
+	#container th, #container td {
+		border: 1px solid black; height: 1.5em; 
+	}
+	.center { text-align: center; }
+	
+	#container tfoot { text-align: center; }
