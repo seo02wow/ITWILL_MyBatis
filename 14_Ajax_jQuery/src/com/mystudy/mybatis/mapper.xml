@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="members">
+
+ 	<!-- select 태그 3개 속성 id,resultType, parameterType
+ 	id : 사용할 명칭(필수항목) , 현재 매퍼파일에서 유일한 이름 사용 
+ 	resultType : 조회 결과값 저장하기 위한 데이터 타입(1개 데이터에 대한 타입지정)
+ 	parameterType : 전달 받은 파라미터 데이터의 타입 지정(선택)
+ 	 -->
+ 	<select id="all" resultType="com.mystudy.ajax.vo.MemberVO">
+ 		SELECT * FROM MEMBERS ORDER BY NAME
+ 	</select>
+ 	
+ 	<!-- 이름으로 검색 -->
+ 	<select id="searchName" parameterType="string" resultType="com.mystudy.ajax.vo.MemberVO">
+ 		SELECT * 
+		FROM MEMBERS
+		WHERE NAME LIKE '%'|| #{name } ||'%'
+ 	</select>
+ 	
+</mapper>
